@@ -2,11 +2,15 @@ package pers.xy.architecture.learn.aop;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
+import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
+import org.springframework.stereotype.Component;
 
 import java.lang.reflect.Method;
 
+@Aspect
+@Component
 public class AspectAdvice {
     @Pointcut(value = "@annotation(pers.xy.architecture.learn.aop.AspectInvocation)")
     public void pointCut() {
